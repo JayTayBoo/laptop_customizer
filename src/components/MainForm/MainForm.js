@@ -1,5 +1,5 @@
 import React from "react";
-import FeatureCategory from "../FeatureCategory/FeatureCategory";
+import FeatureCategory from "../Specs/Specs";
 
 export default function Features(props) {
   const features = Object.keys(props.features).map((feature, idx) => {

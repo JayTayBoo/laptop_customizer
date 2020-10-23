@@ -1,6 +1,6 @@
 import React from "react";
 import slugify from "slugify";
-import FeatureOption from "../FeatureOption/FeatureOption";
+import FeatureOption from "../Parts/Parts";
 
 export default function FeatureCategory(props) {
   const options = props.options.map((item) => {

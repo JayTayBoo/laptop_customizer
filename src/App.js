@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 // Imports from other main components
-import Total from "./components/Total/Total";
-import Features from "./components/Features/Features";
-import Summary from "./components/Summary/Summary";
+import Features from "./components/MainForm/MainForm";
+import Summary from "./components/MainSummary/MainSummary";
+import FEATURES from "./FEATURES";
 import "./App.css";
 
 // This object will allow us to
@@ -53,7 +53,7 @@ class App extends Component {
             <h2>Customize your laptop</h2>
             <Features
               USCurrencyFormat={USCurrencyFormat}
-              features={this.props.features}
+              features={FEATURES}
               selected={this.state.selected}
               updateFeature={this.updateFeature}
             />
@@ -61,10 +61,6 @@ class App extends Component {
           <section className="main__summary">
             <h2>Your cart</h2>
             <Summary
-              USCurrencyFormat={USCurrencyFormat}
-              selected={this.state.selected}
-            />
-            <Total
               USCurrencyFormat={USCurrencyFormat}
               selected={this.state.selected}
             />

@@ -1,5 +1,6 @@
 import React from "react";
-import SummaryItem from "../SummaryItem/Summaryitem";
+import SummaryItem from "../Option/Option";
+import Total from "../Total/Total";
 
 export default function Summary(props) {
   const summary = Object.keys(props.selected).map((feature, idx) => {
@@ -16,5 +17,13 @@ export default function Summary(props) {
       />
     );
   });
-  return <> {summary} </>;
+  return (
+    <>
+      {summary}
+      <Total
+        USCurrencyFormat={props.USCurrencyFormat}
+        selected={props.selected}
+      />
+    </>
+  );
 }
